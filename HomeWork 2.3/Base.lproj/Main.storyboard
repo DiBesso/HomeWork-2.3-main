@@ -69,6 +69,11 @@
                             <constraint firstItem="Y6W-Vk-jeJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uMv-Qg-wS0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FargotPassButton" destination="7bt-hu-VwH" id="3eI-d8-aCe"/>
+                        <outlet property="FargotUserNameButton" destination="x3V-Yc-ZmV" id="hQJ-pM-039"/>
+                        <outlet property="LogInButton" destination="LO7-PS-bVY" id="AgI-nM-hvE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
