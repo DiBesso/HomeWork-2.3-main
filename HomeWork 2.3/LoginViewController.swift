@@ -7,15 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
+    @IBOutlet weak var userNameText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var LogInButton: UIButton!
     @IBOutlet weak var FargotUserNameButton: UIButton!
     @IBOutlet weak var FargotPassButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeVC = segue.destination as! WelcomeViewController
+        welcomeVC.welcome = userNameText.text
+    }
+    
     @IBAction func UNAlert() {
         let alert = UIAlertController (title: "OOOPS!!!", message: "Your User Name is Dima", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
