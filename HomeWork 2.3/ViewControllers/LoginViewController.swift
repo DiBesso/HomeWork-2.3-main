@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
                 welcomeVC.welcome = user
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
-                aboutUserVC.title = user
+                aboutUserVC.label = user
             }
         }
     }

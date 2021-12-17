@@ -8,7 +8,10 @@
 import UIKit
 
 class AboutMeViewController: UIViewController {
-
+    
+    var label = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
