@@ -140,7 +140,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hNd-4I-9q3"/>
-                        <color key="backgroundColor" red="0.96901684999465942" green="0.62064016290814084" blue="0.36031201836267379" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="hNd-4I-9q3" firstAttribute="trailing" secondItem="GYG-Y1-0B6" secondAttribute="trailing" constant="50" id="2ll-2N-sb1"/>
                             <constraint firstItem="hNd-4I-9q3" firstAttribute="bottom" secondItem="ZWB-eW-YOv" secondAttribute="bottom" constant="164" id="dh5-mS-G4j"/>
@@ -167,6 +167,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0Dx-eC-TSD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rmX-kR-dL6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -220,7 +221,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU7-8B-6SX">
                                 <rect key="frame" x="126" y="478" width="68" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Далее"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Далее">
+                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="lvT-Yz-OYJ" kind="show" id="0oR-6J-QsL"/>
                                 </connections>
@@ -243,7 +246,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Обо мне" id="0nv-kA-mki"/>
                     <connections>
+                        <outlet property="myAgeLabel" destination="F7s-21-IAk" id="Atp-vA-tHt"/>
+                        <outlet property="myNameLabel" destination="VpR-c8-jKo" id="PUa-9x-hzn"/>
                         <outlet property="myPhoto" destination="yoc-Rp-85d" id="kxJ-3l-jue"/>
+                        <outlet property="mySurnameLabel" destination="ysv-6y-q58" id="YJz-fP-cbq"/>
                         <segue destination="lvT-Yz-OYJ" kind="show" identifier="showSegue" id="pIE-vZ-x76"/>
                     </connections>
                 </viewController>
@@ -286,69 +292,81 @@
         <!--Факты-->
         <scene sceneID="Ycg-xa-ODR">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="lvT-Yz-OYJ" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="lvT-Yz-OYJ" customClass="FactsViewController" customModule="HomeWork_2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rbx-lP-L3u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="0x3-Ab-g0j">
-                                <rect key="frame" x="121.5" y="151.5" width="77.5" height="277"/>
+                                <rect key="frame" x="119.5" y="146.5" width="81.5" height="287"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-54-uZ4">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Факт 1">
                                                     <attributes>
-                                                        <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                        <font key="NSFont" size="16" name="MarkerFelt-Wide"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="FactNumberOneAlert" destination="lvT-Yz-OYJ" eventType="touchUpInside" id="8AJ-iv-UAv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTR-YO-V2S">
-                                        <rect key="frame" x="0.0" y="81.5" width="77.5" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="84" width="81.5" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Факт 2">
                                                     <attributes>
-                                                        <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                        <font key="NSFont" size="16" name="MarkerFelt-Wide"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="FactNumberTwoAlert" destination="lvT-Yz-OYJ" eventType="touchUpInside" id="PkH-HM-5mq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-D6-2oq">
-                                        <rect key="frame" x="0.0" y="163" width="77.5" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="168" width="81.5" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Факт 3">
                                                     <attributes>
-                                                        <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                        <font key="NSFont" size="16" name="MarkerFelt-Wide"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="FactNumberThreeAlert" destination="lvT-Yz-OYJ" eventType="touchUpInside" id="MsE-B8-hfa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr5-FO-F2u">
-                                        <rect key="frame" x="0.0" y="244.5" width="77.5" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="252" width="81.5" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Факт 4">
                                                     <attributes>
-                                                        <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                        <font key="NSFont" size="16" name="MarkerFelt-Wide"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="FactNumberFourAlert" destination="lvT-Yz-OYJ" eventType="touchUpInside" id="bUb-hC-nqg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -381,8 +399,14 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

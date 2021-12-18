@@ -16,6 +16,7 @@
 		A43BF3962769175800B51A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3952769175800B51A7E /* Assets.xcassets */; };
 		A43BF3992769175800B51A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43BF3972769175800B51A7E /* LaunchScreen.storyboard */; };
 		A43BF3A127691FBA00B51A7E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BF3A027691FBA00B51A7E /* WelcomeViewController.swift */; };
+		A4490949276DE17800877A50 /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4490948276DE17800877A50 /* FactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A43BF3982769175800B51A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A43BF39A2769175800B51A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A43BF3A027691FBA00B51A7E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A4490948276DE17800877A50 /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FactsViewController.swift; path = "HomeWork 2.3/ViewControllers/FactsViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 				A43BF3902769175600B51A7E /* LoginViewController.swift */,
 				A42E4F35276D0D1900F17DB1 /* AboutMeViewController.swift */,
 				A43BF3A027691FBA00B51A7E /* WelcomeViewController.swift */,
+				A4490948276DE17800877A50 /* FactsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				A42E4F34276D04E100F17DB1 /* FactsAboutMe.swift in Sources */,
 				A43BF3912769175600B51A7E /* LoginViewController.swift in Sources */,
+				A4490949276DE17800877A50 /* FactsViewController.swift in Sources */,
 				A43BF3A127691FBA00B51A7E /* WelcomeViewController.swift in Sources */,
 				A43BF38D2769175600B51A7E /* AppDelegate.swift in Sources */,
 				A42E4F36276D0D1900F17DB1 /* AboutMeViewController.swift in Sources */,

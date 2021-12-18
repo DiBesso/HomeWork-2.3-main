@@ -10,12 +10,18 @@ import UIKit
 class AboutMeViewController: UIViewController {
     
     @IBOutlet weak var myPhoto: UIImageView!
-
+    @IBOutlet weak var myNameLabel: UILabel!
+    @IBOutlet weak var mySurnameLabel: UILabel!
+    @IBOutlet weak var myAgeLabel: UILabel!
+    
     var label = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let structOfUser = User ()
+        myNameLabel.text = structOfUser.name
+        mySurnameLabel.text = structOfUser.surname
+        myAgeLabel.text = structOfUser.age
     }
     
     func addImageToUIImageView () {

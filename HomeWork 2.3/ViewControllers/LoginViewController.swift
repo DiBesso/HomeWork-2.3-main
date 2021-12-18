@@ -30,15 +30,17 @@ class LoginViewController: UIViewController {
                 welcomeVC.welcome = user
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
+               
                 aboutUserVC.label = user
+                
             }
         }
     }
     
 
     @IBAction func logInAction() {
-        
-        if userNameText.text != user || passwordText.text != password {
+        let infoByUser = User ()
+        if userNameText.text != infoByUser.name || passwordText.text != infoByUser.password {
             showAlert(
                 title: "Invalid User Name or Password",
                 message: "Please, enter correct User Name and Password",
