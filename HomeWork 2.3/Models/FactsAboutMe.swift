@@ -5,12 +5,16 @@
 //  Created by Дмитрий Бессонов on 18.12.2021.
 //
 
+import UIKit
+
 struct User {
-    let userName: String
-    let password: String
+    let name: String
+    let surname: String
+    let age: Int
     let person: [Facts]
 }
 
 struct Facts {
+    
     
 }
