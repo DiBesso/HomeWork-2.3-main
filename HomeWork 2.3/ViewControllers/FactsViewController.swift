@@ -31,14 +31,14 @@ class FactsViewController: UIViewController {
     
     @IBAction func FactNumberThreeAlert() {
         let facts = Facts ()
-        let alert = UIAlertController (title: "Факт 1:", message: facts.factNumberThree, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController (title: "Факт 3:", message: facts.factNumberThree, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
         present (alert, animated: true)
     }
     
     @IBAction func FactNumberFourAlert() {
         let facts = Facts ()
-        let alert = UIAlertController (title: "Факт 1:", message: facts.factNumberFour, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController (title: "Факт 4:", message: facts.factNumberFour, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
         present (alert, animated: true)
     }
