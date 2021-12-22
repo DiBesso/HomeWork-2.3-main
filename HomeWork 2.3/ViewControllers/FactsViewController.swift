@@ -9,37 +9,43 @@ import UIKit
 
 class FactsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    
-    }
+    var user: User!
     
     @IBAction func FactNumberOneAlert() {
-        let facts = Facts ()
-        let alert = UIAlertController (title: "Факт 1:", message: facts.factNumberOne, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
-        present (alert, animated: true)
+        showAlertController(
+            tittle: user.facts.numberOfFactOne,
+            fact: user.facts.factNumberOne
+        )
+     
     }
     
     @IBAction func FactNumberTwoAlert() {
-        let facts = Facts ()
-        let alert = UIAlertController (title: "Факт 2:", message: facts.factNumberTwo, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
-        present (alert, animated: true)
+        showAlertController(
+            tittle: user.facts.numberOfFactTwo,
+            fact: user.facts.factNumberTwo
+        )
+      
     }
     
     @IBAction func FactNumberThreeAlert() {
-        let facts = Facts ()
-        let alert = UIAlertController (title: "Факт 3:", message: facts.factNumberThree, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
-        present (alert, animated: true)
+        showAlertController(
+            tittle: user.facts.numberOfFactThree,
+            fact: user.facts.factNumberThree
+        )
+       
     }
     
     @IBAction func FactNumberFourAlert() {
-        let facts = Facts ()
-        let alert = UIAlertController (title: "Факт 4:", message: facts.factNumberFour, preferredStyle: UIAlertController.Style.alert)
+        showAlertController(
+            tittle: user.facts.numberOfFactFour,
+            fact: user.facts.factNumberFour
+        )
+       
+    }
+    private func showAlertController (tittle: String, fact: String) {
+        let alert = UIAlertController (title: tittle, message: fact, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
-        present (alert, animated: true)
+        
+        present(alert, animated: true)
     }
 }

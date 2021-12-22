@@ -14,7 +14,8 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var mySurnameLabel: UILabel!
     @IBOutlet weak var myAgeLabel: UILabel!
     
-    var label = ""
+    var user: User!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,14 @@ class AboutMeViewController: UIViewController {
         myAgeLabel.text = structOfUser.age
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let factsVC = segue.destination as? FactsViewController else { return }
+        factsVC.user = user
+    }
+    
     func addImageToUIImageView () {
         let myImage: UIImage = UIImage(named: "Ph-65.JPG")!
         myPhoto.image = myImage
     }
 }
+

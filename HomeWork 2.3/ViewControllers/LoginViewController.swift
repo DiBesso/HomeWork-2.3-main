@@ -14,24 +14,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var FargotUserNameButton: UIButton!
     @IBOutlet weak var FargotPassButton: UIButton!
     
-    private let user = "Dima"
-    private let password = "pass"
+    private let user = User ()
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabBarController = segue.destination as! UITabBarController
-        let viewControllers = tabBarController.viewControllers!
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.welcome = user
+                welcomeVC.welcome = user.name
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
                
-                aboutUserVC.label = user
+                aboutUserVC.user = user
                 
             }
         }
@@ -79,7 +75,6 @@ extension LoginViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
-        
     }
 }
 
